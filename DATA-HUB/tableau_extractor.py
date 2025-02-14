@@ -55,6 +55,7 @@ def get_dashboards(auth_token, site_id):
     headers = {"X-Tableau-Auth": auth_token}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
+        print(response.text)
         root = ET.fromstring(response.text)
         dashboards = []
         for workbook in root.findall(".//t:workbook", namespaces={"t": "http://tableau.com/api"}):
@@ -121,7 +122,7 @@ def extract_metadata():
     auth_token, site_id = get_auth_token()
     dashboards = get_dashboards(auth_token, site_id)
     df_dashboards = pd.DataFrame(dashboards)
-    with pd.ExcelWriter("tableau_metadata5.xlsx") as writer:
+    with pd.ExcelWriter("tableau_metadata.xlsx") as writer:
         df_dashboards.to_excel(writer, sheet_name="Dashboards", index=False)
     print("✅ Extracted dashboard metadata saved to 'tableau_metadata.xlsx'.")
 
