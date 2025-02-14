@@ -1,5 +1,7 @@
 import requests
 import pandas as pd
+import sys
+sys.path.append(r"C:\Users\arjun\Quadrant\tableau_to_power_bi_project")
 import config
 
 # 🔹 Microsoft Fabric (Power BI) Credentials

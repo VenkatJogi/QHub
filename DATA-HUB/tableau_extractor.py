@@ -3,6 +3,8 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 import csv
 import io
+import sys
+sys.path.append(r"C:\Users\arjun\Quadrant\tableau_to_power_bi_project")
 import config
 
 # 🔹 Tableau Server Details (Update These)
