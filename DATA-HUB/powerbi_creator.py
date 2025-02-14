@@ -1,13 +1,12 @@
 import requests
 import pandas as pd
-import json
-import time
+import config
 
 # 🔹 Microsoft Fabric (Power BI) Credentials
-CLIENT_ID = 
-CLIENT_SECRET = 
-TENANT_ID = 
-WORKSPACE_ID = 
+CLIENT_ID = config.client_id
+CLIENT_SECRET = config.client_secret
+TENANT_ID = config.tenant_id
+WORKSPACE_ID =
 EXCEL_FILE = 
 DATASET_NAME = 
 

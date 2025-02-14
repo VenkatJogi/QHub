@@ -3,11 +3,12 @@ import requests
 import json
 import pandas as pd
 import time
+import config
 
 # 🔹 Microsoft Fabric Credentials
-CLIENT_ID = 
-CLIENT_SECRET =
-TENANT_ID =
+CLIENT_ID = config.client_id
+CLIENT_SECRET = config.client_secret
+TENANT_ID = config.tenant_id
 WORKSPACE_ID =
 
 AUTHORITY = f"https://login.microsoftonline.com/{TENANT_ID}"
