@@ -1,4 +1,0 @@
-msal
-requests
-pandas
-openpyxl  # Required for reading/writing Excel files
